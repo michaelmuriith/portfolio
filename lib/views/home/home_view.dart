@@ -9,7 +9,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Container(),
+      body: Column(
+        children: const [Text('Michael A. Wanjiru')],
+      ),
     );
   }
 }
