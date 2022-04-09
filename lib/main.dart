@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/views/home/home_view.dart';
+import 'locator.dart';
+import './routes/route_paths.dart' as routes;
+import './routes/router.dart' as router;
+import 'services/service.dart';
 
 void main() {
+  setUpLocator();
   runApp(const MyApp());
 }
 
@@ -12,11 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Michael A. Wanjiru',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView(),
+      onGenerateRoute: router.generateRoute,
+      initialRoute: routes.homeViewRoute,
+      navigatorKey: locator<NavigationService>().navigatorKey,
     );
   }
 }
