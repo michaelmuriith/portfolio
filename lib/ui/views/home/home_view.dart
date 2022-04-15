@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
-import 'package:portfolio/constants/ui_helper.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -10,40 +9,21 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var devWidth = MediaQuery.of(context).size.width;
     return ViewModelBuilder<HomeViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         backgroundColor: kBackgroundColor,
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Row(
             children: [
               Container(
-                width: 200,
-                height: 200,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: kPrimaryColor,
-                ),
+                color: kBackgroundColor,
+                width: devWidth / 2,
               ),
-              verticalSpaceLarge,
-              Text(
-                model.user,
-                style: const TextStyle(color: kCaptionColor),
+              Container(
+                color: kSecBackgroud,
+                width: devWidth / 2,
               ),
-              verticalSpaceLarge,
-              Text(
-                model.profession,
-                style: const TextStyle(color: kDangerColor),
-              ),
-              verticalSpaceLarge,
-              Text(
-                model.description,
-                style: const TextStyle(color: kCaptionColor),
-              ),
-              Row(
-                children: const [],
-              )
             ],
           ),
         ),
