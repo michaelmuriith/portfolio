@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/ui/widget/widget.dart';
@@ -65,6 +66,7 @@ class HomeView extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        const Text('I am a '),
                         AnimatedTextKit(
                           repeatForever: true,
                           animatedTexts: [
@@ -97,9 +99,43 @@ class HomeView extends StatelessWidget {
                     height: 2,
                     color: kSecBackgroud,
                   ),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      IconLink(
+                        icon: FontAwesomeIcons.githubAlt,
+                        size: 20,
+                        color: Color(0xff00405d),
+                        url: 'https://twitter.com/mikemuriithi4',
+                      ),
+                      IconLink(
+                        icon: FontAwesomeIcons.linkedinIn,
+                        size: 18,
+                        color: Color(0xff0077b5),
+                        url: 'https://twitter.com/mikemuriithi4',
+                      ),
+                      IconLink(
+                        icon: FontAwesomeIcons.m,
+                        size: 15,
+                        color: Color(0xff000000),
+                        url: 'https://twitter.com/mikemuriithi4',
+                      ),
+                      IconLink(
+                        icon: FontAwesomeIcons.twitter,
+                        size: 15,
+                        color: Color(0xff55acee),
+                        url: 'https://twitter.com/mikemuriithi4',
+                      ),
+                      IconLink(
+                        icon: FontAwesomeIcons.envelope,
+                        size: 15,
+                        color: Color(0xfffb3958),
+                        url: 'https://twitter.com/mikemuriithi4',
+                      ),
+                    ],
                   ),
                 ],
               ),
