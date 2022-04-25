@@ -1,7 +1,105 @@
-.home{
-  position: relative;
+.grid-container {
+  font-family: arial;
+  font-size: 24px;
   width: 100vw;
   height: 100vh;
-  
-  background: #07111A;
+}
+
+.grid-container > .logo{
+  width: 120px;
+  height: 121px;
+  left: 50%;
+  margin-bottom: 30px;
+}
+
+.grid-container > .dotted > h1, h3{
+  /* Center horizontally*/
+  text-align: center;
+}
+
+.grid-container > .dotted > h3{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: capitalize;
+}
+
+.grid-container > .dotted{
+  width: 50%;
+  color: white;
+  border-top: 4px dashed #ffffff;
+  border-bottom: 4px dashed #ffffff;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.grid-container > .dotted > ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.grid-container > .dotted > ul > li{
+  width: fit-content;
+  margin: auto 16px auto 16px;
+}
+
+.social_logo{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.social_logo > a > .social_item{
+  height: 30px;
+  width: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 7px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* link icons change color on hover */
+
+.social_logo > a > .gitHub:hover{
+  color: #171515;
+  border: 1px solid #171515;
+}
+
+.social_logo > a > .linkedIn:hover{
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+}
+
+.social_logo > a > .medium:hover{
+  color: #02b875;
+  border: 1px solid #02b875;
+}
+
+.social_logo > a > .instagram:hover{
+  color: #c32aa3;
+  border: 1px solid #c32aa3;
+}
+
+.social_logo > a > .twitter:hover{
+  color: #1da1f2;
+  border: 1px solid #1da1f2;
+}
+
+/* btn */
+
+.btn{
+  height: 40px;
+  width: 150px;
+  border-radius: 29px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
 }
